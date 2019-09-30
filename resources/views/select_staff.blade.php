@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <!-- スタッフ１    -->
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -16,8 +17,11 @@
 
                     You are logged in!
                     Here is select staff page.
+                    <button type="submit" class="btn btn-primary">
+                    </button>
                 </div>
             </div>
+            <!-- スタッフ２ -->
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
