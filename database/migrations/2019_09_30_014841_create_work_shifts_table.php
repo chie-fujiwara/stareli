@@ -15,6 +15,12 @@ class CreateWorkShiftsTable extends Migration
     {
         Schema::create('work_shifts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('staff_id');
+            $table->foreign('staff_id')
+                ->references('id')->on('users')->onUpdate('cascade');
+            $table->date('work_date');
+            $table->time('work_start_time');
+            $table->time('work_end_time');
             $table->timestamps();
         });
     }
