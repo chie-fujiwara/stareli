@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>stareli</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -82,9 +82,10 @@
         </div>
         @endif
 
+        <!--トップページ　ロゴ  -->
         <div class="content">
             <div class="title m-b-md">
-                Sta/reli
+                <img src="img/stareli_logo2.png" width="40%" height="40%" alt="">
             </div>
 
             <div class="links">
