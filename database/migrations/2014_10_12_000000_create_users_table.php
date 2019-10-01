@@ -20,7 +20,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->string('img_url')->nullable();
+            // $table->tinyIncrements('role');
             $table->timestamps();
+            // $table->tinyIncrements('disable')->default(0);
         });
     }
 
