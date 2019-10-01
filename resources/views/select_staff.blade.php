@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <!-- スタッフ１    -->
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">スタッフA</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,15 +15,16 @@
                     </div>
                     @endif
 
-                    You are logged in!
-                    Here is select staff page.
-                    <button type="submit" class="btn btn-primary">
+                    ///スタッフ紹介文///
+
+                    <br>
+                    <button type="submit" class="btn btn-primary">シフトを確認する
                     </button>
                 </div>
             </div>
             <!-- スタッフ２ -->
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">スタッフB</div>
 
                 <div class="card-body">
                     <!-- @if (session('status'))
@@ -31,10 +32,9 @@
                         {{ session('status') }}
                     </div>
                     @endif -->
-
-                    You are logged in!
-                    Here is select staff page.
-                    <button type="submit" class="btn btn-primary">
+                    ///スタッフ紹介文///
+                    <br>
+                    <button type="submit" class="btn btn-primary">シフトを確認する
                     </button>
                 </div>
             </div>
