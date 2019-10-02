@@ -20,8 +20,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('img_url')->nullable();
-            // $table->tinyIncrements('role');
+            // $table->string('img_url')->nullable();
+            $table->integer('u_type')->default('1');
+            $table->tinyInteger('ac_flg')->default('1');
             $table->timestamps();
             // $table->tinyIncrements('disable')->default(0);
         });
