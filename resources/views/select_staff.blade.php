@@ -18,8 +18,10 @@
                     ///スタッフ紹介文///
 
                     <br>
+                    <form action="{{ url('wshift/')}}" method="GET">
                     <button type="submit" class="btn btn-primary">シフトを確認する
                     </button>
+                    </form>
                 </div>
             </div>
             <!-- スタッフ２ -->
