@@ -15,12 +15,12 @@
                     </div>
                     @endif
 
-                    ///スタッフ紹介文///
+                    ここに200文字程度の紹介文が入ります。ここに200文字程度の紹介文が入ります。ここに200文字程度の紹介文が入ります。ここに200文字程度の紹介文が入ります。
 
                     <br>
                     <form action="{{ url('wshift/')}}" method="GET">
-                    <button type="submit" class="btn btn-primary">シフトを確認する
-                    </button>
+                        <button type="submit" class="btn btn-primary">シフトを確認する
+                        </button>
                     </form>
                 </div>
             </div>
@@ -34,7 +34,8 @@
                         {{ session('status') }}
                     </div>
                     @endif -->
-                    ///スタッフ紹介文///
+                    ここに200文字程度の紹介文が入ります。ここに200文字程度の紹介文が入ります。ここに200文字程度の紹介文が入ります。ここに200文字程度の紹介文が入ります。
+
                     <br>
                     <button type="submit" class="btn btn-primary">シフトを確認する
                     </button>
