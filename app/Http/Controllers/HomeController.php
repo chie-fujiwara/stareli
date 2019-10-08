@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('select_staff');
     }
+
+    public function selectws()
+    {
+        return view('work_shift');
+    }
 }
