@@ -15,6 +15,8 @@ use App\Reservation;
 use App\User;
 use Illuminate\Http\Request;
 
+// use Illuminate\Routing\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,11 +26,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //各スタッフのシフト表示ページ(来店日時の登録のみ)
-Route::get('/wshift', function(){
+Route::get('/wshift', function () {
     return view('work_shift');
 });
 
-Route::post('/reserve', function (Request $request){
+//
+Route::post('/reserve', function (Request $request) {
     //バリデーション
     $validator = Validator::make($request->all(), [
         // 'task' => 'required|max:191',
@@ -46,5 +49,17 @@ Route::post('/reserve', function (Request $request){
     $reservation->rv_comment =$request->rv_comment;
     $reservation->save();
 
-    return redirect('/home');
+    return redirect('/thanksrv');
 });
+
+//予約完了ページ
+Route::get('/thanksrv', function () {
+    return view('thanksrv');
+});
+
+//顧客自身の予約一覧表示処理へ
+Route::get('/history', function () {
+    return view('rvhistory');
+});
+
+//
