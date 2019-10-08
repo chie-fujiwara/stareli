@@ -61,15 +61,36 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a class="dropdown-item" href="{{ url('/home') }}">
+                                            {{ __('スタッフ一覧') }}
+                                        </a>
+                                        <form action="{{ url('/home') }}" method="GET">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ url('/history') }}" >
+                                            {{ __('来店予約一覧') }}
+                                        </a>
+                                        <form action="{{ url('/history') }}" method="GET"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
+                                            {{ __('Logout') }}
+                                        </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    style="display: none;">
-                                    @csrf
-                                </form>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
                         @endguest
