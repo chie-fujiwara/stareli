@@ -31,7 +31,7 @@ class Calendar
         $next_month = date("m",$next);
         // 日曜日からカレンダーを表示するため前月の余った日付をループの初期値にする
         $day = 1 - $firstWeekDay;
-        $this->html = <<< EOS
+        $this->html = <<< EOD
             <h2>
                 <a class="btn btn-primary" href="/wshift?year={$prev_year}&month={$prev_month}" role="button">&lt;前月</a>
                     {$year}/{$month}
@@ -47,7 +47,7 @@ class Calendar
                     <th scope="col">Fri</th>
                     <th scope="col">Sat</th>
                 </tr>
-        EOS;
+        EOD;
 
         // カレンダーの日付部分を生成する
         while ($day <= $lastDay) {
@@ -76,5 +76,8 @@ class Calendar
         }
         $this->html .= "</table>";
         return $this->html;
+        //
     }
+    //
 }
+
