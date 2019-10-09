@@ -5,9 +5,10 @@
     <h3 class="justify-content-center">ASAMIさんのシフト</h3>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="title m-b-md">
+            <!-- <div class="title m-b-md">
                 <img src="img/アセット 6.png" width="100%" height="40%" alt="">
-            </div>
+            </div> -->
+            {!! $cal_tag !!}
             <!-- <h3>スタッフ予約フォーム</h3> -->
             <form action="{{ url('/reserve') }}" method="POST" class="form-horizontal">
                 {{ csrf_field() }}
