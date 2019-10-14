@@ -35,7 +35,7 @@ class HomeController extends Controller
 
         $cal = new Calendar();
         $tag = $cal->showCalendarTag($request->month, $request->year);
-
-        return view('work_shift', ['cal_tag' => $tag]);
+   
+        return view('work_shift', compact('tag'));
     }
 }
