@@ -11,9 +11,12 @@
 |
 */
 
+use App\Http\Controllers\HomeController;
 use App\Reservation;
 use App\User;
 use Illuminate\Http\Request;
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route as IlluminateRoute;
 
 // use Illuminate\Routing\Route;
 
@@ -26,9 +29,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //各スタッフのシフト表示ページ(来店日時の登録のみ)
-Route::get('/wshift', function () {
-    return view('work_shift');
-});
+// Route::get('/wshift', function () {
+//     return view('work_shift');
+// });
+Route::get('/wshift', 'HomeController@selectws')->name('wshift');
 
 //
 Route::post('/reserve', function (Request $request) {
