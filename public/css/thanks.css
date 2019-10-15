@@ -1,0 +1,72 @@
+body {
+    background-color: #faebeb;
+    background-size: cover;
+    font-family: 'Noto Serif JP', serif;
+    background-image: url(../img/backimg.jpg);
+}
+
+.form {
+    padding-bottom: 2.5em;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.auth-main {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 30px;
+}
+
+.auth-container {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.sub {
+    padding-top: 25px;
+}
+
+.sub p {
+    color: #413B84;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+}
+
+.comp {
+    padding-top: 25px;
+}
+
+.comp p {
+    color: #413B84;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    line-height: 1.5em;
+}
+
+.submit-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.btn {
+    width: 290px;
+    padding: 15px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.mypage {
+    background-color: #fabbbb;
+    margin-top: 100px;
+}
