@@ -17,12 +17,14 @@
 <body>
     <div class="list-container">
         <div class="shop-card" href="">
+            <!-- <p>{!! $staffs !!}</p> -->
+            @foreach($staffs as $staff)
             <div class="shop-card-head">
                 <div class="account-head">
                     <img src="img/staff_1.png" alt="" class="account-thumb">
                 </div>
                 <div class="account-head-detail">
-                    <p>名前 : ASAMI<p>
+                    <p>名前 : {{ $staff->name}}<p>
                             <p>店舗名 :<br>
                                 BEAUTY&YOUTH<br>
                                 天神ソラリアプラザ店
@@ -38,7 +40,7 @@
             <form action="{{ url('wshift/')}}" method="GET">
                 <input type="submit" value="シフトを確認する" class="btn shift">
             </form>
-
+            @endforeach
         </div>
     </div>
 

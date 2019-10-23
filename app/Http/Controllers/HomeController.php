@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Calendar;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('select_staff');
+        $users = User::where('u_type', '2')->get();
+        return view('select_staff', ['staffs' => $users ]);
     }
 
     public function selectws(Request $request)
