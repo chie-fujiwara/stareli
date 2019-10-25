@@ -1,20 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet"> -->
-
+@section('additional_head')
     <link href="{{ asset('css/select_staff.css')}}" rel="stylesheet">
+@endsection
 
-</head>
-
-<body>
+@section('content')
     <div class="list-container">
         <div class="shop-card" href="">
             <!-- <p>{!! $staffs !!}</p> -->
@@ -43,11 +33,6 @@
             @endforeach
         </div>
     </div>
-
-</body>
-
-
-
 
 <!-- <div class="container">
 
@@ -103,5 +88,5 @@
             </div>
         </div>
     </div>
-</div>
-@endsection -->
+</div> -->
+@endsection
