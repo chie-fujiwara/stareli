@@ -1,28 +1,20 @@
 @extends('layouts.app')
 
-@section('content')
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet"> -->
-
+@section('additional_head')
     <link href="{{ asset('css/select_staff.css')}}" rel="stylesheet">
+@endsection
 
-</head>
-
-<body>
+@section('content')
     <div class="list-container">
         <div class="shop-card" href="">
+            <!-- <p>{!! $staffs !!}</p> -->
+            @foreach($staffs as $staff)
             <div class="shop-card-head">
                 <div class="account-head">
                     <img src="img/staff_1.png" alt="" class="account-thumb">
                 </div>
                 <div class="account-head-detail">
-                    <p>名前 : ASAMI<p>
+                    <p>名前 : {{ $staff->name}}<p>
                             <p>店舗名 :<br>
                                 BEAUTY&YOUTH<br>
                                 天神ソラリアプラザ店
@@ -38,14 +30,9 @@
             <form action="{{ url('wshift/')}}" method="GET">
                 <input type="submit" value="シフトを確認する" class="btn shift">
             </form>
-
+            @endforeach
         </div>
     </div>
-
-</body>
-
-
-
 
 <!-- <div class="container">
 
@@ -101,5 +88,5 @@
             </div>
         </div>
     </div>
-</div>
-@endsection -->
+</div> -->
+@endsection
