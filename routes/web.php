@@ -34,7 +34,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/wshift', function () {
 //     return view('work_shift');
 // });
-Route::get('/wshift', 'HomeController@selectws')->name('wshift');
+Route::post('/wshift', 'HomeController@selectws');
 
 //お気に入りスタッフ登録処理
 // Route::post('/mkconstaff', function (Request $request){

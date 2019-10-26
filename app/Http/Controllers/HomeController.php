@@ -30,14 +30,17 @@ class HomeController extends Controller
         return view('select_staff', ['staffs' => $users ]);
     }
 
-    public function selectws(Request $request)
+    public function selectws(Request $request, User $staffs)
     {
+        $staffs = User::where('id', $request->staff_id)->find($request->staff_id);
         // $now = new Carbon();
         // echo ($now);
 
+        //カレンダー情報取得
         $cal = new Calendar();
         $tag = $cal->showCalendarTag($request->month, $request->year);
    
-        return view('work_shift', compact('tag'));
+        // return view('work_shift', compact('tag'));
+        return view('work_shift', ['staffs' => $staffs, 'tag' => $tag]);
     }
 }

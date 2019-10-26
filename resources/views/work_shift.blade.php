@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="container">
-    <h3 class="justify-content-center">ASAMIさんのシフト</h3>
+    <!-- {!! $staffs !!} -->
+    <!-- <h3 class="justify-content-center">ASAMIさんのシフト</h3> -->
+    <h3 class="justify-content-center">{!! $staffs->name !!}さんのシフト</h3>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <!-- <div class="title m-b-md">
@@ -10,11 +12,21 @@
             </div> -->
 
             <h2>
-                <a class="btn btn-primary" href="/wshift?year={!! $tag[1][2] !!}&month={!! $tag[1][3] !!}"
-                    role="button">&lt;前月</a>
+                <form method="POST" action="/wshift?year={!! $tag[1][2] !!}&month={!! $tag[1][3] !!}">
+                {{ csrf_field() }}
+                    <input type="hidden" name="staff_id" value="{{$staffs -> id}}">
+                    <input type="submit" value="&lt;前月" class="btn btn-primary">
+                </form>
+                <!-- <a class="btn btn-primary" href="/wshift?year={!! $tag[1][2] !!}&month={!! $tag[1][3] !!}"
+                    role="button">&lt;前月</a> -->
                 {!! $tag[1][0] !!}/{!! $tag[1][1] !!}
-                <a class="btn btn-primary" href="/wshift?year={!! $tag[1][4] !!}&month={!! $tag[1][5] !!}"
-                    role="button">翌月&gt;</a>
+                <form method="POST" action="/wshift?year={!! $tag[1][4] !!}&month={!! $tag[1][5] !!}">
+                {{ csrf_field() }}
+                    <input type="hidden" name="staff_id" value="{{$staffs -> id}}">
+                    <input type="submit" value="翌月&gt;" class="btn btn-primary">
+                </form>
+                <!-- <a class="btn btn-primary" href="/wshift?year={!! $tag[1][4] !!}&month={!! $tag[1][5] !!}"
+                    role="button">翌月&gt;</a> -->
             </h2>
             <table class="table table-bordered" style="table-layout:fixed;">
                 <tr>
