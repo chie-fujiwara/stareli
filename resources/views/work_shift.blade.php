@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('additional_head')
+<link href="{{ asset('css/select_staff.css')}}" rel="stylesheet">
+@endsection
+
 @section('content')
 <div class="container">
     <!-- {!! $staffs !!} -->
@@ -61,6 +65,7 @@
                             <button type="submit" class="btn btn-success">予約する</button>
                         </div>
                     </div>
+                    <input type="hidden" name="staff_id" value="{{$staffs -> id}}">
                 </form>
         </div>
     </div>
