@@ -34,7 +34,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/wshift', function () {
 //     return view('work_shift');
 // });
-Route::get('/wshift', 'HomeController@selectws')->name('wshift');
+Route::post('/wshift', 'HomeController@selectws');
 
 //お気に入りスタッフ登録処理
 // Route::post('/mkconstaff', function (Request $request){
@@ -56,6 +56,7 @@ Route::post('/reserve', function (Request $request) {
     //来店日時の登録
     $reservation = new Reservation;
     $reservation->customer_id = Auth::user()->id;
+    $reservation->staff_id = $request->staff_id;
     $reservation->rv_datetime = $request->rv_datetime;
     $reservation->rv_comment =$request->rv_comment;
     $reservation->save();
@@ -70,7 +71,10 @@ Route::get('/thanksrv', function () {
 
 //顧客自身の予約一覧表示処理へ
 Route::get('/history', function () {
-    return view('rvhistory');
+    $reservations = Reservation::where('customer_id',Auth::user()->id)
+                ->orderBy('rv_datetime', 'asc')
+                ->get();
+    return view('rvhistory', ['myrvs' => $reservations]);
 });
 
 //
