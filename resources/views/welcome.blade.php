@@ -36,14 +36,27 @@
             position: relative;
         }
 
+        .logo{
+            height: 4vw;
+        }
+
         .top-right {
             position: absolute;
-            right: 10px;
-            top: 18px;
+            right: 2vw;
+            top: 1.2vw;
+            /* display: flex;
+            align-items: center; */
         }
 
         .content {
+            height: 100vh;
             text-align: center;
+            background-image: url(img/backimg.jpg);
+            background-size: 100% auto;
+            background-position: 50% 25%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: whitesmoke;
         }
 
         .title {
@@ -52,8 +65,10 @@
 
         .links>a {
             color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
+            /* padding: 0 25px; */
+            padding: 0 1.6vw;
+            /* font-size: 13px; */
+            font-size: 1vw;
             font-weight: 600;
             letter-spacing: .1rem;
             text-decoration: none;
@@ -61,7 +76,9 @@
         }
 
         .m-b-md {
-            margin-top: 10rem;
+            padding-top: 10rem;
+            /* margin-left: 25rem; */
+            /* background-image: url(img/top_back.jpg); */
         }
     </style>
 </head>
@@ -69,7 +86,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img class="logo1" src="img/stareli_logo.png" alt="">
+            <!-- <img class="logo1" src="img/stareli_logo2.png" alt=""> -->
             @if (Route::has('login'))
             <div class="top-right links">
                 @auth
@@ -83,26 +100,13 @@
                 @endauth
             </div>
             @endif
-
-            <!-- <div class="content">
-                <div class="title m-b-md">
-                    Sta/reli
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
- -->
-
-
         </div>
+        <!-- トップページロゴ -->
+        <div class="content">
+            <div class="title m-b-md">
+                <img src="img/stareli_logo2.png" width="40%" height="40%" alt="">
+            </div>
+        </div>    
     </div>
 
 
@@ -121,22 +125,7 @@
         </div>
         @endif -->
 
-    <!--トップページ　ロゴ  -->
-    <div class="content">
-        <div class="title m-b-md">
-            <img src="img/stareli_logo2.png" width="40%" height="40%" alt="">
-        </div>
-
-        <!-- <div class="links">
-            <a href="https://laravel.com/docs">Docs</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://blog.laravel.com">Blog</a>
-            <a href="https://nova.laravel.com">Nova</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
-            </div> -->
-    </div>
+    
     <!-- </div> -->
 </body>
 
