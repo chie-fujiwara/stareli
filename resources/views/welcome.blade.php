@@ -11,76 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
-    <style>
-        html,
-        body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
+    <link rel="stylesheet" href="{{ asset('css/welcome.css')}}">
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .logo{
-            height: 4vw;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 2vw;
-            top: 1.2vw;
-            /* display: flex;
-            align-items: center; */
-        }
-
-        .content {
-            height: 100vh;
-            text-align: center;
-            background-image: url(img/backimg.jpg);
-            background-size: 100% auto;
-            background-position: 50% 25%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-color: whitesmoke;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links>a {
-            color: #636b6f;
-            /* padding: 0 25px; */
-            padding: 0 1.6vw;
-            /* font-size: 13px; */
-            font-size: 1vw;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            padding-top: 10rem;
-            /* margin-left: 25rem; */
-            /* background-image: url(img/top_back.jpg); */
-        }
-    </style>
 </head>
 
 <body>
@@ -104,9 +36,9 @@
         <!-- トップページロゴ -->
         <div class="content">
             <div class="title m-b-md">
-                <img src="img/stareli_logo2.png" width="40%" height="40%" alt="">
+                <img src="img/stareli_logo2.png" class="top-logo">
             </div>
-        </div>    
+        </div>
     </div>
 
 
@@ -125,7 +57,7 @@
         </div>
         @endif -->
 
-    
+
     <!-- </div> -->
 </body>
 
