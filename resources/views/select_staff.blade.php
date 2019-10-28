@@ -1,51 +1,41 @@
 @extends('layouts.app')
 
+@section('additional_head')
+<link href="{{ asset('css/select_staff.css')}}" rel="stylesheet">
+@endsection
+
 @section('content')
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet"> -->
-
-    <link href="{{ asset('css/select_staff.css')}}" rel="stylesheet">
-
-</head>
-
-<body>
-    <div class="list-container">
-        <div class="shop-card" href="">
-            <div class="shop-card-head">
-                <div class="account-head">
-                    <img src="img/staff_1.png" alt="" class="account-thumb">
-                </div>
-                <div class="account-head-detail">
-                    <p>名前 : ASAMI<p>
-                            <p>店舗名 :<br>
-                                BEAUTY&YOUTH<br>
-                                天神ソラリアプラザ店
-                            </p>
-                </div>
+<div class="list-container">
+    <div class="shop-card" href="">
+        <!-- <p>{!! $staffs !!}</p> -->
+        @foreach($staffs as $staff)
+        <div class="shop-card-head">
+            <div class="account-head">
+                <img src="img/staff_1.png" alt="" class="account-thumb">
             </div>
-            <div class="shop-card-body">
-                <p class="shop-card-text">カジュアルな中でも女性らいしいスタイリングが得意です。<br>
-                    温泉が好きでよく旅行に行きます！
-
-                </p>
+            <div class="account-head-detail">
+                <p>名前 : {{ $staff->name}}<p>
+                        <p>店舗名 :<br>
+                            BEAUTY&YOUTH<br>
+                            天神ソラリアプラザ店
+                        </p>
             </div>
-            <form action="{{ url('wshift/')}}" method="GET">
-                <input type="submit" value="シフトを確認する" class="btn shift">
-            </form>
-
         </div>
+        <div class="shop-card-body">
+            <p class="shop-card-text">カジュアルな中でも女性らいしいスタイリングが得意です。<br>
+                温泉が好きでよく旅行に行きます！
+
+            </p>
+        </div>
+        <!-- <form action="{{ url('/wshift' .$staff->id )}}" method="POST"> -->
+        <form action="{{ url('/wshift')}}" method="POST">
+            @csrf
+            <input type="hidden" name="staff_id" value="{{$staff -> id}}">
+            <input type="submit" value="シフトを確認する" class="btn shift">
+        </form>
+        @endforeach
     </div>
-
-</body>
-
-
-
+</div>
 
 <!-- <div class="container">
 
@@ -101,5 +91,5 @@
             </div>
         </div>
     </div>
-</div>
-@endsection -->
+</div> -->
+@endsection
