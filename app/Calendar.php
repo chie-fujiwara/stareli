@@ -17,6 +17,7 @@ class Calendar
         $month = $m;
         if ($year == null) {
             // システム日付を取得する。
+            $date = date("Y-m-d\TH-I");
             $year = date("Y");
             $month = date("m");
         }
@@ -59,7 +60,7 @@ class Calendar
             $this->html .= "</tr>";
         }
         $this->html .= "</table>";
-        $time = array($year, $month, $prev_year, $prev_month, $next_year, $next_month);
+        $time = array($year, $month, $prev_year, $prev_month, $next_year, $next_month, $date);
 
         $arr = [$this->html, $time];
         
