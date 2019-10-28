@@ -51,7 +51,7 @@
                         <!-- 来店日時 -->
                         <div class="col-sm-6">
                             <label for="rv_datetime" class="col-sm-10 control-label">予約日時</label>
-                            <input type="datetime-local" value = "2000-07-01T12:00" name="rv_datetime" id="rv_datetime" class="form-control">
+                            <input type="datetime-local" name="rv_datetime" id="rv_datetime" class="form-control">
                         </div>
                         <!-- comment -->
                         <div class="col-sm-6 col-md-20">
