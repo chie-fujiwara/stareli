@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container">
-    {!! $tag[1][6] !!}
+    <!-- {!! $tag[1][6] !!} -->
     <!-- <h3 class="justify-content-center">ASAMIさんのシフト</h3> -->
     <h3 class="justify-content-center">{!! $staffs->name !!}さんのシフト</h3>
     <div class="row justify-content-center">
