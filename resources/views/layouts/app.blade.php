@@ -106,19 +106,5 @@
         </main>
     </div>
 </body>
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
-<script>
-/* // get the iso time string formatted for usage in an input['type="datetime-local"'] */
-var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
-var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0,-1);
-var localISOTimeWithoutSeconds = localISOTime.slice(0,16);
-
-/* // select the "datetime-local" input to set the default value on */
-var dtlInput = document.querySelector('input[type="datetime-local"]');
-
-/* // set it and forget it ;) */
-dtlInput.value = localISOTime.slice(0,16);
-
-</script>
 </html>
