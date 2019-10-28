@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container">
-    <!-- {!! $staffs !!} -->
+    {!! $tag[1][6] !!}
     <!-- <h3 class="justify-content-center">ASAMIさんのシフト</h3> -->
     <h3 class="justify-content-center">{!! $staffs->name !!}さんのシフト</h3>
     <div class="row justify-content-center">
@@ -51,7 +51,7 @@
                         <!-- 来店日時 -->
                         <div class="col-sm-6">
                             <label for="rv_datetime" class="col-sm-10 control-label">予約日時</label>
-                            <input type="datetime-local" step="3600" value="{{ !!$tag[1][6] }}" name="rv_datetime" id="rv_datetime" class="form-control">
+                            <input type="datetime-local" step="3600" value="2019-10-01T12:00" name="rv_datetime" id="rv_datetime" class="form-control">
                         </div>
                         <!-- comment -->
                         <div class="col-sm-6 col-md-20">

@@ -17,7 +17,7 @@ class Calendar
         $month = $m;
         if ($year == null) {
             // システム日付を取得する。
-            $date = date("Y-m-d\TH-I");
+            $date = date("Y-m-d\TH:i");
             $year = date("Y");
             $month = date("m");
         }
