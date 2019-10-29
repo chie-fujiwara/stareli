@@ -66,6 +66,12 @@
         /* margin-left: 25rem; */
         /* background-image: url(img/top_back.jpg); */
     }
+    .login {
+        text-align: center;
+    }
+    .new {
+        text-align: center;
+    }
 }
 
 @media (min-width:768px) {
@@ -132,5 +138,11 @@
         padding-top: 10rem;
         /* margin-left: 25rem; */
         /* background-image: url(img/top_back.jpg); */
+    }
+    .login {
+        text-align: center;
+    }
+    .new {
+        text-align: center;
     }
 }

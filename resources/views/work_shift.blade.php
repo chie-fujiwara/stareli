@@ -16,18 +16,18 @@
             </div> -->
 
             <h2>
-                <form method="POST" action="/wshift?year={!! $tag[1][2] !!}&month={!! $tag[1][3] !!}">
-                {{ csrf_field() }}
+                <form class="marrow" method="POST" action="/wshift?year={!! $tag[1][2] !!}&month={!! $tag[1][3] !!}">
+                    {{ csrf_field() }}
                     <input type="hidden" name="staff_id" value="{{$staffs -> id}}">
-                    <input type="submit" value="&lt;前月" class="btn btn-primary">
+                    <input type="submit" value="&lt;" class="btn btn-warning">
                 </form>
                 <!-- <a class="btn btn-primary" href="/wshift?year={!! $tag[1][2] !!}&month={!! $tag[1][3] !!}"
                     role="button">&lt;前月</a> -->
                 {!! $tag[1][0] !!}/{!! $tag[1][1] !!}
-                <form method="POST" action="/wshift?year={!! $tag[1][4] !!}&month={!! $tag[1][5] !!}">
-                {{ csrf_field() }}
+                <form class="marrow" method="POST" action="/wshift?year={!! $tag[1][4] !!}&month={!! $tag[1][5] !!}">
+                    {{ csrf_field() }}
                     <input type="hidden" name="staff_id" value="{{$staffs -> id}}">
-                    <input type="submit" value="翌月&gt;" class="btn btn-primary">
+                    <input type="submit" value="&gt;" class="btn btn-warning">
                 </form>
                 <!-- <a class="btn btn-primary" href="/wshift?year={!! $tag[1][4] !!}&month={!! $tag[1][5] !!}"
                     role="button">翌月&gt;</a> -->
@@ -51,7 +51,8 @@
                         <!-- 来店日時 -->
                         <div class="col-sm-6">
                             <label for="rv_datetime" class="col-sm-10 control-label">予約日時</label>
-                            <input type="datetime-local" step="3600" value="2019-10-01T12:00" name="rv_datetime" id="rv_datetime" class="form-control">
+                            <input type="datetime-local" step="3600" value="2019-10-01T12:00" name="rv_datetime"
+                                id="rv_datetime" class="form-control">
                         </div>
                         <!-- comment -->
                         <div class="col-sm-6 col-md-20">

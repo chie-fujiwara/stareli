@@ -19,19 +19,19 @@
             background-size: cover;
         }
 
-        .content{
+        .content {
             display: flex;
             justify-content: center;
             padding: 30vw 0;
             margin-top: 5vw
         }
-        
+
         .logo {
             padding-top: 3vw;
             height: 60px;
             width: auto;
         }
-        
+
         .auth-main {
             /* display: table-cell; */
             text-align: center;
@@ -40,12 +40,12 @@ height:697px; */
             vertical-align: middle;
             padding-top: 70px;
         }
-        
+
         .auth-container {
             text-align: center;
             padding: 30px 20px;
         }
-        
+
         .submit-container {
             display: flex;
             justify-content: center;
@@ -53,7 +53,7 @@ height:697px; */
             /* justify-content: center; */
             align-items: center;
         }
-        
+
         .btn {
             width: 280px;
             padding: 15px;
@@ -65,29 +65,31 @@ height:697px; */
             margin-bottom: 5px;
             font-size: 15px;
         }
-        
+
         .new {
             background-color: #fabbbb;
+            text-align: center;
             /* margin-top: 50px; */
         }
-        
+
         .login {
             background-color: whitesmoke;
             margin-top: 2px;
+            text-align: center;
         }
-        
+
         .shop {
             background-color: #8a86b3;
             margin-top: 10px;
             color: white;
         }
-        
+
         .line {
             border-bottom: 1.8px dashed grey;
             padding-bottom: 15px;
             width: 280px;
         }
-        
+
         p {
             color: gray;
             padding: 5vw 0;
@@ -108,21 +110,21 @@ height:697px; */
             @if (Route::has('login'))
             <!--  -->
             <div class="submit-container">
-                    @auth
-                    <a href="{{ url('/home') }}" class="btn shop">ホーム</a> 
-                    @else
-                    <a href="{{ route('login') }}" class="btn login">ログイン</a>
-                    <p>または</p>
-                    @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="btn new">新規会員登録</a>
-                    
-                    @endif 
-                    @endauth
-                </div>
+                @auth
+                <a href="{{ url('/home') }}" class="btn shop">ホーム</a>
+                @else
+                <a href="{{ route('login') }}" class="btn login">ログイン</a>
+                <p>または</p>
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="btn new">新規会員登録</a>
+
+                @endif
+                @endauth
+            </div>
             <!--  -->
             @endif
         </div>
-        
+
     </div>
 
 
