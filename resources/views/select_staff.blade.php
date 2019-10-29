@@ -11,7 +11,7 @@
         @foreach($staffs as $staff)
         <div class="shop-card-head">
             <div class="account-head">
-                <img src="img/staff_1.png" alt="" class="account-thumb">
+                <img src="img/staff_2.png" alt="" class="account-thumb">
             </div>
             <div class="account-head-detail">
                 <p>名前 : {{ $staff->name}}<p>

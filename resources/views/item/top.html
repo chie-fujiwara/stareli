@@ -13,13 +13,12 @@
             /* background-image: url(img/dryflower.jpg); */
             background-size: cover;
         }
-
+        
         .logo {
             height: 60px;
             width: auto;
         }
-
-
+        
         .auth-main {
             /* display: table-cell; */
             text-align: center;
@@ -27,22 +26,20 @@
 height:697px; */
             vertical-align: middle;
             padding-top: 70px;
-
         }
-
+        
         .auth-container {
             text-align: center;
             padding: 30px 20px;
-
         }
-
+        
         .submit-container {
             display: flex;
             flex-direction: column;
             /* justify-content: center; */
             align-items: center;
         }
-
+        
         .btn {
             width: 280px;
             padding: 15px;
@@ -53,31 +50,30 @@ height:697px; */
             text-decoration: none;
             margin-bottom: 5px;
             font-size: 15px;
-
         }
-
+        
         .new {
             background-color: #fabbbb;
             margin-top: 50px;
         }
-
+        
         .login {
             background-color: whitesmoke;
             margin-top: 2px;
         }
-
+        
         .shop {
             background-color: #8a86b3;
             margin-top: 10px;
             color: white;
         }
-
+        
         .line {
             border-bottom: 1.8px dashed grey;
             padding-bottom: 15px;
             width: 280px;
         }
-
+        
         p {
             color: gray;
         }
@@ -89,20 +85,24 @@ height:697px; */
     <div class="auth-main">
         <div class="auth-container">
             <div class="form">
-                <h1>
-                    <a href="">
+                <div class="content">
+                    <div class="">
                         <img src="img/stareli_logo2.png" class="logo">
-                    </a>
-                </h1>
+                    </div>
+                </div>
 
-                <form class="submit-container" action="">
-                    <input type="submit" value="新規会員登録" class="btn new">
+                <div class="submit-container">
+                    @auth
+                    <a href="{{ url('/home') }}" class="btn shop">ホーム</a> @else
+                    <a href="{{ route('login') }}" class="btn login">ログイン</a>
                     <p>または</p>
-                    <input type="submit" value="ログイン" class="btn login">
-                    <p class="line"></p>
-                    <input type="submit" value="登録店舗を探す" class="btn shop">
-
-                </form>
+                    @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="btn new">新規会員登録</a>
+                    <!-- <input type="submit" value="新規会員登録" class="btn new"> -->
+                    <!-- <p class="line"></p>
+                    <input type="submit" value="登録店舗を探す" class="btn shop"> -->
+                    @endif @endauth
+                </div>
 
             </div>
         </div>
