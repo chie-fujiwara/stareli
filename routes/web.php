@@ -27,6 +27,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/addstaff', function () {
+    return view('addstaff');
+});
+
 //お気に入りスタッフ一覧表示処理
 Route::get('/home', 'HomeController@index')->name('home');
 
