@@ -1,9 +1,10 @@
-body{
+body {
     background-color: #faebeb;
     /* background-image: url(img/dryflower.jpg); */
     background-size: cover;
     /* font-family: 'Noto Serif JP', serif; */
 }
+
 
 /* body a {
     text-decoration: none;
@@ -15,11 +16,16 @@ a {
     text-decoration: none;
 }
 
-.account-head-detail p{
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.account-head-detail p {
     text-align: left;
 }
 
-.list-container{
+.list-container {
     text-align: center;
 }
 
@@ -27,25 +33,21 @@ a {
     display: block;
     padding: 16px 0 20px;
     border-bottom: 1px solid #d8d8d8;
-    color: gray;  
+    color: gray;
 }
-
 
 .shop-card-head {
     position: relative;
     margin-bottom: 8px;
-     display: flex;
+    display: flex;
     /* align-items: center; */
     justify-content: center;
 }
-
-
 
 .account-thumb {
     width: 100%;
     border-radius: 8px;
     border-color: #efefef;
-    
     display: block;
     /* width: 75px; */
     height: auto;
@@ -58,12 +60,11 @@ a {
     margin-left: 12px;
 }
 
-.account-head-detail p{
+.account-head-detail p {
     font-size: 13px;
 }
 
-
-.shop-card-body{
+.shop-card-body {
     justify-content: center;
 }
 
@@ -73,29 +74,33 @@ a {
     overflow: hidden; */
     margin-bottom: 16px;
     font-size: 13px;
-    
 }
 
-.btn{
-   width: 300px;
-    padding: 10px;
-    color:white;
+.marrow {
+    margin: 0 20px;
+}
+
+.btn {
+    /* width: 300px; */
+    padding: 0 15px;
+    color: white;
     display: inline-block;
-    opacity: 0.8;
+    opacity: 0.7;
     border-radius: 4px;
     text-decoration: none;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     font-size: 15px;
     text-align: center;
 }
 
+.btn-success {
+    width: 300px;
+    padding: 10px;
+}
+
 .shift {
     background-color: #fabbbb;
-    margin-top:10px;
- }
-
-            
-
-            
-
-            
+    margin-bottom: 30px;
+    width: 300px;
+    padding: 8px 0;
+}

@@ -2,27 +2,26 @@
 
 @section('additional_head')
 <style>
-        body {
-            background-color: #faebeb;
-            /* background-image: url(img/dryflower.jpg); */
-            background-size: cover;
-        }
+    body {
+        background-color: #faebeb;
+        /* background-image: url(img/dryflower.jpg); */
+        background-size: cover;
+    }
 
-        .auth-main {
-            text-align: center;
-            vertical-align: middle;
-            padding-top: 10px;
+    .auth-main {
+        /* text-align: center; */
+        vertical-align: middle;
+        /* padding-top: 10px; */
+    }
 
-        }
-
-        .auth-container {
-            text-align: center;
-            padding: 20px 30px;
-
-        }
+    .auth-container {
+        /* text-align: center; */
+        padding: 20px 30px;
+    }
 
         .login {
-            margin-bottom: 50px;
+            /* margin-bottom: 50px; */
+            text-align: center;
         }
 
 
@@ -37,11 +36,12 @@
             display: flex;
             flex-direction: column;
             /* justify-content: center; */
-            align-items: center;
+            /* align-items: center; */
+            color: #808080;
         }
 
         #name{
-            width: 280px;
+            /* width: 280px; */
             padding: 15px;
             color: gray;
             display: inline-block;
@@ -55,7 +55,7 @@
         }
 
         #user-email {
-            width: 280px;
+            /* width: 280px; */
             padding: 15px;
             color: gray;
             display: inline-block;
@@ -69,7 +69,7 @@
         }
 
         #user-password {
-            width: 280px;
+            /* width: 280px; */
             padding: 15px;
             color: gray;
             display: inline-block;
@@ -83,7 +83,7 @@
         }
 
         #password-confirm{
-            width: 280px;
+            /* width: 280px; */
             padding: 15px;
             color: gray;
             display: inline-block;
@@ -99,9 +99,9 @@
 
         #btn_login {
             background-color: #8a86b3;
-            margin-top: 150px;
+            margin-top: 70px;
             color: white;
-            width: 280px;
+            /* width: 280px; */
             padding: 15px;
             display: inline-block;
             opacity: 0.8;
